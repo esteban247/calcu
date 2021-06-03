@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculadora con JavaScript</title>
+<input type="text" id="nu1" placeholder="Ingresa #">
+<input type="text" id="nu2" placeholder="Ingresa #">
+
+<select id="op">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+    
+<button id="calcular2">Calcular</button>
+
+<output id="r2"></output> 
+<script>
+    
+    document.querySelector('#calcular2').addEventListener('click', () =>{
+        const n1 = parseInt(document.querySelector('#nu1').value);
+        const n2 = parseInt(document.querySelector('#nu2').value);
+        const op2 = document.querySelector('#op').value;
+        let r;
+        if(op2 == '+'){
+            r = n1 + n2;
+        }else if( op2 == '-'){
+            r = n1 - n2;
+        }else if(op2 == '*'){
+            r = n1 * n2;
+        }else if(op2 == '/'){
+            r = n1 / n2;
+        }
+        document.querySelector('#r2').innerHTML = r;
+    });
+
+</script>
+</body>
+</html>
